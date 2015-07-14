@@ -25,37 +25,57 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-47347932-1', 'auto');
+      ga('require', 'displayfeatures');
+      ga('send', 'pageview');
+
+    </script>
   </head>
 
   <body>
 
     <!-- Static navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
-        <div id="navbar" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li class="active"><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CV <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="https://ca.linkedin.com/pub/david-zhou/4a/529/a5" target="_blank">LinkedIn</a></li>
-            <li><a href="https://github.com/davidzhou94" target="_blank">GitHub</a></li>
-            <li role="separator" class="divider"></li>
-            <li class="dropdown-header">Resume</li>
-            <li><a href="content/davidzhou.pdf">PDF</a></li>
-            <li><a href="davidzhou.html">HTML</a></li>
+        <div class="navbar-header">
+           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigationbar">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div id="navigationbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="active"><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">CV <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="content/davidzhou.pdf" target="_blank">PDF</a></li>
+              <li><a href="https://ca.linkedin.com/pub/david-zhou/4a/529/a5" target="_blank">LinkedIn</a></li>
+              <li><a href="https://github.com/davidzhou94" target="_blank">GitHub</a></li>
+            </ul>
+            </li>
           </ul>
-          </li>
-        </ul>
         </div><!--/.nav-collapse -->
       </div><!--/.container -->
     </nav>
     
     <!-- Main content area -->    
     <div class="container">
+      <div class="text-center">
+        <h1>My Projects</h2>
+        <p>This is a selection of my project work, some from work, some from school, and some for personal enjoyment. If you're into that kind of thing, you can see my <a href="https://github.com/davidzhou94" target="_blank">GitHub activity here</a>.
+      </div>      
       <div class="row">
         <div class="col-md-4">
         </div>
@@ -68,11 +88,46 @@
         </div>
         <div class="col-md-8">
           <p><strong>Bottom line:</strong> Using unconventional methods I fixed a program for which I did not have the source code.</p>
-          <p>When I started working with MCB in 2009, they already had the report generation side of the process automated, but the developer that created that program has long since left and did not leave behind the source code for the project.</p>
-          <p>For a long time this wasn’t a major problem, whenever the program wouldn’t run properly, we just found workarounds such as manually editing the report generated. The first big problem came when we started upgrading our hardware and discovered that the application could not run on x64 systems. In simple terms, the program was compiled (built) with the target CPU set to “any CPU” despite making use of components like Microsoft Jet that did not have x64 versions.</p>
-          <p>The fix should’ve been relatively simple, all that needed to be done was to recompile the project with the target CPI set to “x86”. Unfortunately I didn’t have source code. The conventional way of doing things would have been to recreate the project, but for many years my programming skill was not up to task.</p>
-          <p>After nearly a year of remote-accessing an x86 server for the sole purpose of running this one program, I got fed up and found a way to decompile the program. Good news was the decompiler ran like a charm. Bad news was the decompiled code was in a language I was unfamiliar with (C#) and the code was riddled with errors because many of the components it used were antiquated.</p>
+          <p>When I started working with MCB in 2009, they already had the report generation side of the process automated, but the developer that created that program has long since left and did not leave behind the source code.</p>
+          <p>For a long time this wasn’t a major problem, whenever the program wouldn’t run properly, we just found workarounds such as manually editing the report generated. The first big problem came when we started upgrading our hardware and discovered that the application could not run on x64 systems. In simple terms, the program was compiled (built) with the target CPU set to “any CPU” despite making use of x86-only components like Microsoft Jet.</p>
+          <p>The fix should have been relatively simple, all that needed to be done was to recompile the project with the target CPU set to “x86”. Unfortunately I didn’t have source code. The conventional way of doing things would have been to recreate the project, but for many years my programming skill was not up to task.</p>
+          <p>After several months of remote-accessing an x86 server for the sole purpose of running this one program, I got fed up and found a way to decompile the program. Good news was the decompiler ran like a charm. Bad news was the decompiled code was in a language I was unfamiliar with (C#) and the code was riddled with errors because many of the components it used were antiquated.</p>
           <p>Luckily, C# was similar to Java and easy to learn. After an afternoon of googling and experimenting, the program emerged fixed –and with extra features like generating reports in PDF, and batch processing.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-8">
+          <h2>Web application maintenance and upgrade</h2>
+        </div>
+        <div class="col-md-4 text-center">
+          <p><img class="" src="img/crystal-reports-aandc.png" class="img-responsive" alt="ms word #1"></p>
+          <p>2014</p>
+        </div>
+        <div class="col-md-8">
+          <p><strong>Bottom line:</strong> As a development support resource, I resolved long outstanding issues and helped upgrade legacy systems, saving on licensing costs.</p>
+          <p>I worked for Aboriginal Affairs and Northern Development Canada (AANDC) as a student software developer in the summer of 2014. The team I was on supported a web application that managed the infrastructure, housing, and water infrastructure on First Nations across Canada.</p>
+          <p>My primary purpose on the team was to aid in development tasks, specifically in tackling the low-priority but long-outstanding bugs and change requests. Examples include a document difference tool that broke on HTML columns and correcting fields whose use cases went out of date and contained mostly junk information.</p>
+          <p>My final 'project' during the summer was to upgrade a system that used an older version of SAP Crystal Reports. This system was the only active remaining project that still used the older version, creating an extra cost to retain the license. The system didn't have a dedicated team any more so my supervisor offered to have me take a look with his help.</p>
+          <p>Over two weeks, I upgraded the system to the new version. Some of the challenges during the upgrade included dealing with fields that no longer existed and differences between the production version of the software and the source code that was available to us (there was a consultant who was brought in briefly at one point the fix some bugs). During the course of the upgrade I also fixed a few bugs.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-8">
+          <h2>Barcode automation</h2>
+        </div>
+        <div class="col-md-4 text-center">
+          <p><img class="" src="img/ds6708-manual-and-scanner.png" class="img-responsive" alt="beep beep boop"></p>
+          <p>2013</p>
+        </div>
+        <div class="col-md-8">
+          <p><strong>Bottom line:</strong> The time it took for me to enter the data for a parcel dropped from an average of 1 minute to 10 seconds.</p>
+          <p>From the summer of 2013 onwards, I worked in postal customs as a Student Border Services Officer at the Léo-Blanchette Mail Processing Plant. My duties were primarily to rate parcels for taxes using a computer system. I noticed two things after a month of work: 1) many parcels were repeats (e.g. the information entered for a large batch of parcels would be the same) 2) the barcode scanners we used could be programmed with rules to repeat the keys I pressed on the keyboard.</p>
+          <p>I then proceeded to do research on the barcode scanners and found a method to program them. Using the reference guides, I created a series of special barcodes that automated the entry of data once I made a decision about the parcel’s rating.</p>
+          <p>During the time I worked at the customs, I continued to develop the system. My efforts focused on reducing the average number of barcodes required per parcel and to increase the range of parcels for which I could automate data entry. When I moved on from this job, I left a simplified programming instruction sheet that allowed anyone to program the scanners simply by scanning across the sheet.</p>
         </div>
       </div>
       <div class="row">
@@ -98,7 +153,7 @@
       <hr>
 
       <footer>
-        <p>Last update: 2015-07-12</p>
+        <p>Last update: 2015-07-13</p>
       </footer>
     </div> <!-- /container -->
 
