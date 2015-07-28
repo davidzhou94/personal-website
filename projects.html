@@ -73,9 +73,25 @@
     <!-- Main content area -->    
     <div class="container">
       <div class="text-center">
-        <h1>My Projects</h2>
+        <h1>My Projects</h1>
         <p>This is a selection of my project work, some from work, some from school, and some for personal enjoyment. If you're into that kind of thing, you can see my <a href="https://github.com/davidzhou94" target="_blank">GitHub activity here</a>.
       </div>      
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-8">
+          <h2>COMP361 Software Engineering Project</h2>
+        </div>
+        <div class="col-md-4 text-center">
+          <p><img class="" src="img/medieval-warfare.png" class="img-responsive"></p>
+          <p>September 2014 - April 2015</p>
+        </div>
+        <div class="col-md-8">
+          <p><strong>Bottom line:</strong> In a team of 5, I participated in the requirements elicitation, design, and implementation of a large software system as part of the COMP361 course at McGill.</p>
+          <p>Every year the School of Computer Science at McGill University offers a year-long project course that aims to give students hands-on experience in working on a large software system in a team. In 2014-2015, the project for all the teams was a game called Medieval Warfare that our professor invented. Medieval Warfare was a multi-player, turn-based, hexagonal-tiled, strategy game similar to Civilization. The first half of the course was more theoretical, focusing more on topics like UML and analysing requirements. The second half was more application, covering topics such as structural design and profiling. </p>
+          <p>In terms of technology, my team chose to use Java for both the server and client applications. For our networking we used the RabbitMQ framework and a thin server architecture. We also leveraged tools such as Git and Gradle and frameworks such as Spring and LWJGL. During the modelling phase, we used TouchCORE, a tool developed by our professor's lab. This tool allowed us to generate a significant amount of our "business logic" code from the UML model itself.</p>
+        </div>
+      </div> <!-- /row -->
       <div class="row">
         <div class="col-md-4">
         </div>
@@ -92,9 +108,9 @@
           <p>For a long time this wasn’t a major problem, whenever the program wouldn’t run properly, we just found workarounds such as manually editing the report generated. The first big problem came when we started upgrading our hardware and discovered that the application could not run on x64 systems. In simple terms, the program was compiled (built) with the target CPU set to “any CPU” despite making use of x86-only components like Microsoft Jet.</p>
           <p>The fix should have been relatively simple, all that needed to be done was to recompile the project with the target CPU set to “x86”. Unfortunately I didn’t have source code. The conventional way of doing things would have been to recreate the project, but for many years my programming skill was not up to task.</p>
           <p>After several months of remote-accessing an x86 server for the sole purpose of running this one program, I got fed up and found a way to decompile the program. Good news was the decompiler ran like a charm. Bad news was the decompiled code was in a language I was unfamiliar with (C#) and the code was riddled with errors because many of the components it used were antiquated.</p>
-          <p>Luckily, C# was similar to Java and easy to learn. After an afternoon of googling and experimenting, the program emerged fixed –and with extra features like generating reports in PDF, and batch processing.</p>
+          <p>Luckily, C# was similar to Java and easy to learn. After an afternoon of Googling StackOverflow and experimenting, the program emerged fixed –and with extra features like generating reports in PDF, and batch processing.</p>
         </div>
-      </div>
+      </div> <!-- /row -->
       <div class="row">
         <div class="col-md-4">
         </div>
@@ -112,7 +128,7 @@
           <p>My final 'project' during the summer was to upgrade a system that used an older version of SAP Crystal Reports. This system was the only active remaining project that still used the older version, creating an extra cost to retain the license. The system didn't have a dedicated team any more so my supervisor offered to have me take a look with his help.</p>
           <p>Over two weeks, I upgraded the system to the new version. Some of the challenges during the upgrade included dealing with fields that no longer existed and differences between the production version of the software and the source code that was available to us (there was a consultant who was brought in briefly at one point the fix some bugs). During the course of the upgrade I also fixed a few bugs.</p>
         </div>
-      </div>
+      </div> <!-- /row -->
       <div class="row">
         <div class="col-md-4">
         </div>
@@ -129,7 +145,7 @@
           <p>I then proceeded to do research on the barcode scanners and found a method to program them. Using the reference guides, I created a series of special barcodes that automated the entry of data once I made a decision about the parcel’s rating.</p>
           <p>During the time I worked at the customs, I continued to develop the system. My efforts focused on reducing the average number of barcodes required per parcel and to increase the range of parcels for which I could automate data entry. When I moved on from this job, I left a simplified programming instruction sheet that allowed anyone to program the scanners simply by scanning across the sheet.</p>
         </div>
-      </div>
+      </div> <!-- /row -->
       <div class="row">
         <div class="col-md-4">
         </div>
@@ -148,12 +164,12 @@
           <p>Suffice to say it saved quite a bit of time. In addition to this program I also wrote a few utility programs that checked the database and returned questionnaire files as well as a quick program that converts .DOC files to .PDF files in batches.</p>
           <p>The utility programs and the extractor program were all written in Visual Basic but also make use of Microsoft Jet, Microsoft Access, and Microsoft Word.</p>
         </div>
-      </div>
+      </div> <!-- /row -->
 
       <hr>
 
       <footer>
-        <p>Last update: 2015-07-13</p>
+        <p>Last update: 2015-07-24</p>
       </footer>
     </div> <!-- /container -->
 
