@@ -1,8 +1,5 @@
 # Begin custom section
-/1456/
-/content/
-/img/
-/netflixpassword/
+.gitignore
 # End custom section
 
 #################
